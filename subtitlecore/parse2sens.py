@@ -1,17 +1,12 @@
 from subtitlecore.subtitle import Subtitle
 import sys
+import click
 
-def play(fname, lang):
-    st = Subtitle(fname, lang)
-    st.srt_to_vtt()
-    captions = st.scize()
-    for s in captions:
-        print(s.sens)
-
-def run():
-    if len(sys.argv) < 2:
-        print("srt file and language needed.")
-        return
-    fname = sys.argv[1] 
-    lang = sys.argv[2] if len(sys.argv) >= 3 else "en"
-    play(fname, lang)
+@click.command()
+@click.option("--srtfile", prompt="srt file", help="Specify a srt file")
+@click.option("--lang", default="en", prompt="language", help="Specify language")
+def run(srtfile, lang):
+  st = Subtitle(srtfile, lang)
+  content_sens = st.sentenize()
+  for e in content_sens:
+    print(e)

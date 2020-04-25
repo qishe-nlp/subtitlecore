@@ -1,4 +1,4 @@
-from subtitlecore.subtitle import Subtitle
+from subtitlecore import Subtitle
 import sys
 import click
 

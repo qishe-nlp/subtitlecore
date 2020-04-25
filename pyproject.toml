@@ -2,7 +2,7 @@
 name = "subtitlecore"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Phoenix.Grey <phoenix.grey0108@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"

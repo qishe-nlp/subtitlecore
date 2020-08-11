@@ -7,6 +7,6 @@ import click
 @click.option("--lang", default="en", prompt="language", help="Specify language")
 def run(srtfile, lang):
   st = Subtitle(srtfile, lang)
-  content_sens = st.sentenize()
+  content_sens = st.sentenize(True)
   for e in content_sens:
     print(e)

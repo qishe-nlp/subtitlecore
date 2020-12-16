@@ -15,13 +15,9 @@ class Subtitle:
       self.file = f
       self.fname, self.fext = path.splitext(path.basename(f))
       self.lang = lang
-      self.sentencizer = Sentencizer(lang)
       self._init_content()
 
-  def sentenize(self, choice):
-    #TODO: choice to be formalized into constances
-    return self.sentencizer.mark(self.content, choice)
-  
+ 
   def _init_content(self, dest="./"):
     self.content = []
     obj = webvtt.from_srt(self.file)
@@ -34,3 +30,11 @@ class Subtitle:
         "identifier": str(index+1)
       })
 
+  def plaintext(self):
+    return " ".join([info["text"] for info in self.content])
+
+  def sentenize(self, choice):
+    #TODO: choice to be formalized into constances
+    self.sentencizer = Sentencizer(self.lang)
+    return self.sentencizer.mark(self.content, choice)
+ 

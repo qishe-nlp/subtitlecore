@@ -12,7 +12,7 @@ class ESCaptionMarker:
     sens = []
     if choice:
       nlp = spacy.load("es_core_news_md")
-      doc = nlp(line)
+      doc = nlp(line, disable=["tagger", "ner"])
       _temp = list(doc.sents)
       for s in _temp:
         e = {"text": s.text, "confidence": 1.0}

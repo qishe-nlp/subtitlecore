@@ -12,6 +12,14 @@ subtitlecore.constants module
    :undoc-members:
    :show-inheritance:
 
+subtitlecore.entry module
+-------------------------
+
+.. automodule:: subtitlecore.entry
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 subtitlecore.lib module
 -----------------------
 

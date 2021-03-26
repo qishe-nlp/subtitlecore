@@ -7,17 +7,17 @@ This module demostrates the usage of package `subtitlecore`.
   
   .. code:: shell
     
-    $ pip3 install subtitlecore
+    $ pip3 install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple --verbose subtitlecore
 
 .. topic:: Use as executable
 
   .. code:: shell
 
-    $ parse2text --srtfile movie.srt --lang en
+    $ subtitlecore_parse2text --srtfile movie.srt --lang en
 
   .. code:: shell
 
-    $ parse2sens --srtfile movie.srt --lang en
+    $ subtitlecore_parse2sens --srtfile movie.srt --lang en
 
 
 .. topic:: Get time based content from subtitle file
@@ -55,7 +55,7 @@ This module demostrates the usage of package `subtitlecore`.
         print(l)
 
 """
-__version__ = '0.1.4'
+__version__ = '0.1.5'
 
 
 from .sentencizer import Sentencizer

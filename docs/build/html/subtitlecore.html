@@ -89,6 +89,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">subtitlecore package</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-subtitlecore.constants">subtitlecore.constants module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-subtitlecore.entry">subtitlecore.entry module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-subtitlecore.lib">subtitlecore.lib module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-subtitlecore.sentencizer">subtitlecore.sentencizer module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-subtitlecore.subtitle">subtitlecore.subtitle module</a></li>
@@ -184,6 +185,9 @@
 </dl>
 </dd></dl>
 
+</div>
+<div class="section" id="module-subtitlecore.entry">
+<span id="subtitlecore-entry-module"></span><h2>subtitlecore.entry module<a class="headerlink" href="#module-subtitlecore.entry" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-subtitlecore.lib">
 <span id="subtitlecore-lib-module"></span><h2>subtitlecore.lib module<a class="headerlink" href="#module-subtitlecore.lib" title="Permalink to this headline">¶</a></h2>
@@ -344,16 +348,16 @@
 <p>This module demostrates the usage of package <cite>subtitlecore</cite>.</p>
 <div class="topic">
 <p class="topic-title">Install package</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ pip3 install subtitlecore
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ pip3 install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple --verbose subtitlecore
 </pre></div>
 </div>
 </div>
 <div class="topic">
 <p class="topic-title">Use as executable</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ parse2text --srtfile movie.srt --lang en
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ subtitlecore_parse2text --srtfile movie.srt --lang en
 </pre></div>
 </div>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ parse2sens --srtfile movie.srt --lang en
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ subtitlecore_parse2sens --srtfile movie.srt --lang en
 </pre></div>
 </div>
 </div>

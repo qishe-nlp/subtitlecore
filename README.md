@@ -11,18 +11,18 @@ pip3 install --index-url https://test.pypi.org/simple/ --extra-index-url https:/
 * Get subtitle content
 
 ```shell
-get_subtitle_content --srtfile test.srt --lang en
+subtitleicore_content --srtfile test.srt --lang en
 ``` 
 
 * Parse srtfile into sentences with timestamp
 
 ```shell
-parse2sens --srtfile test.srt --lang en
+subtitlecore_parse2sens --srtfile test.srt --lang en
 ```
 
 * Parse srtfile into plain text
 ```shell
-parse2text --srtfile test.srt --lang en
+subtitlecore_parse2text --srtfile test.srt --lang en
 ```
 
 ### Package usage
@@ -73,9 +73,9 @@ which run tests under `tests/*`
 
 ### Execute
 ```
-poetry run get_subtitle_content --help
-poetry run parse2sens --help
-poetry run parse2text --help
+poetry run subtitlecore_content --help
+poetry run subtitlecore_parse2sens --help
+poetry run subtitlecore_parse2text --help
 ```
 
 ### Create sphix docs

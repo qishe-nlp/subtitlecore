@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "subtitlecore"
-version = "0.1.4"
+version = "0.1.5"
 description = "Parse srt file content into well-formed structures"
 authors = ["Phoenix.Grey <phoenix.grey0108@gmail.com>"]
 
@@ -17,9 +17,9 @@ spacy = "^3.0.5"
 pytest = "^5.2"
 
 [tool.poetry.scripts]
-parse2sens = "entry:parse2sens"
-parse2text = "entry:parse2text"
-get_subtitle_content = "entry:get_subtitle_content"
+subtitlecore_parse2sens = "subtitlecore.entry:parse2sens"
+subtitlecore_parse2text = "subtitlecore.entry:parse2text"
+subtitlecore_content = "subtitlecore.entry:get_subtitle_content"
 
 
 [build-system]

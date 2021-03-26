@@ -1,24 +1,34 @@
+# -*- coding: utf-8 -*-
+
 import webvtt
-import re
 from os import path
-from subtitlecore.sentencizer import Sentencizer
-
-def filter_typos(sentence):
-  filtered = sentence.replace("♪","").replace("\n", " ").replace("-", "")
-  filtered = re.sub(r'[\[\{].*[\}\]]:?', "", filtered).replace("  ", " ")
-  return filtered.strip()
-
+from subtitlecore import Sentencizer
+from subtitlecore.lib import filter_typos
 
 class Subtitle:
-  def __init__(self, f, lang="en"):
-    if path.exists(f) and path.isfile(f):
-      self.file = f
-      self.fname, self.fext = path.splitext(path.basename(f))
+  """Manipulate subtitle content
+
+  Args:
+    srtfile (str): subtitle file name
+    lang (str, optional): subtitle language. Defaults to ``en``
+
+  Attributes:
+    file (str): subtitle file full path
+    fname (str): subtitle file name
+    fext (str): subtitle file extension, e.g, ``srt``, ``vtt``
+    lang (str): subtitle language, e.g, ``en``, ``es``
+    content (list): subtitle content stored as time-based sentences in a list 
+  """
+
+  def __init__(self, srtfile, lang="en"):
+    if path.exists(srtfile) and path.isfile(srtfile):
+      self.file = srtfile
+      self.fname, self.fext = path.splitext(path.basename(srtfile))
       self.lang = lang
       self._init_content()
 
  
-  def _init_content(self, dest="./"):
+  def _init_content(self):
     self.content = []
     obj = webvtt.from_srt(self.file)
 
@@ -31,10 +41,24 @@ class Subtitle:
       })
 
   def plaintext(self):
+    """Get plain text from substitle, without time stamp involved
+
+    Returns:
+      str: Plain text of subtitle file without time stamp information
+    """
+
     return " ".join([info["text"] for info in self.content])
 
-  def sentenize(self, choice):
-    #TODO: choice to be formalized into constances
-    self.sentencizer = Sentencizer(self.lang)
-    return self.sentencizer.mark(self.content, choice)
- 
+  def sentenize(self):
+    """Sentenize each subtitle line within time stamp 
+
+    Returns:
+      list: A list of dict object, which has keys: ``start``, ``end``, ``text``, ``identifier``, ``sens``
+    """
+
+    nlp_content = self.content.copy()
+    tool = Sentencizer(self.lang)
+    for line_info in nlp_content:
+      line = line_info["text"]
+      line_info["sens"] = tool.mark(line) 
+    return nlp_content 

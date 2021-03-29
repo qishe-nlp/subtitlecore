@@ -1,7 +1,9 @@
-### Installation from pip3
+# Installation from pip3
 
 ```shell
 pip3 install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple --verbose subtitlecore
+python -m spacy download en_core_web_md
+python -m spacy download es_core_news_md
 ```
 
 # Usage

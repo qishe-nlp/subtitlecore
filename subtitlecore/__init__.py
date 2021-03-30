@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""subtitlecore Package
+"""``subtitlecore`` Package
 
 This module demostrates the usage of package `subtitlecore`.
 

@@ -48,11 +48,6 @@ def parse2text(srtfile, lang):
   print(text)
 ```
 
-### Check the documentation locally
-```
-python -m http.server -d docs/build/html
-```
-
 # Development
 
 ### Clone project

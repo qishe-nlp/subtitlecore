@@ -8,13 +8,13 @@ authors = ["Phoenix.Grey <phoenix.grey0108@gmail.com>"]
 python = "^3.8"
 webvtt-py = "^0.4.3"
 click = "^7.1.1"
-Sphinx = "^3.5.3"
-sphinx-rtd-theme = "^0.5.1"
 pip = "^21.0.1"
 spacy = "^3.0.5"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+Sphinx = "^3.5.3"
+sphinx-rtd-theme = "^0.5.1"
 
 [tool.poetry.scripts]
 subtitlecore_parse2sens = "subtitlecore.entry:parse2sens"

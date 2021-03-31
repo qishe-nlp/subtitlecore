@@ -62,7 +62,7 @@ git clone https://github.com/qishe-nlp/subtitlecore.git
 poetry update
 ```
 
-### Test and Issue
+### Test
 ```
 poetry run pytest -rP
 ```
@@ -75,18 +75,25 @@ poetry run subtitlecore_parse2sens --help
 poetry run subtitlecore_parse2text --help
 ```
 
-### Create sphix docs
+### Create sphinx docs
 ```
 poetry shell
-cd docs
+cd apidocs
 sphinx-apidoc -f -o source ../subtitlecore
 make html
 python -m http.server -d build/html
 ```
 
+### Hose docs on github pages
+```
+cp -rf apidocs/build/html/* docs/
+```
+
 ### Build
 * Change `version` in `pyproject.toml` and `content_processor/__init__.py`
 * Build python package by `poetry build`
+
+### Git commit and push
 
 ### Publish
 * Set pypi test environment variables in poetry, refer to [poetry doc](https://python-poetry.org/docs/repositories/)

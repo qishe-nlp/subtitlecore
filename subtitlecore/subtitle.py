@@ -21,6 +21,7 @@ class Subtitle:
   """
 
   def __init__(self, srtfile, lang="en"):
+    srtfile = path.expanduser(srtfile)
     if path.exists(srtfile) and path.isfile(srtfile):
       self.file = srtfile
       self.fname, self.fext = path.splitext(path.basename(srtfile))

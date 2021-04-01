@@ -14,8 +14,8 @@ def parse2sens(srtfile, lang, dstfile):
     for s in e["sens"]:
       sens.append(s)
   print(sens)
-  import json
-  with open(dstfile, 'w') as f:
+  import json, os
+  with open(os.path.expanduser(dstfile), 'w') as f:
     json.dump(sens, f) 
     
 

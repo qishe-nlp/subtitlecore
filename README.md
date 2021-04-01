@@ -40,7 +40,7 @@ def get_subtitle_content(srtfile, lang):
 
 def parse2sens(srtfile, lang):
   st = Subtitle(srtfile, lang)
-  content_sens = st.sentenize(True)
+  content_sens = st.sentenize()
   for e in content_sens:
     print(e)
 

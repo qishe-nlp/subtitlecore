@@ -15,7 +15,7 @@ Please refer to [api docs](https://qishe-nlp.github.io/subtitlecore/).
 * Get subtitle content
 
 ```shell
-subtitleicore_content --srtfile test.srt --lang en
+subtitlecore_content --srtfile test.srt --lang en
 ``` 
 
 * Parse srtfile into sentences with timestamp

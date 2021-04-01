@@ -26,6 +26,9 @@ class Subtitle:
       self.fname, self.fext = path.splitext(path.basename(srtfile))
       self.lang = lang
       self._init_content()
+    else:
+      print("File {} does NOT exist !!!".format(srtfile))
+      self.file, self.fname, self.lang, self.content = "", "", lang, []
 
  
   def _init_content(self):

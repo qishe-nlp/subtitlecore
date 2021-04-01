@@ -6,7 +6,7 @@ authors = ["Phoenix.Grey <phoenix.grey0108@gmail.com>"]
 repository = "https://github.com/qishe-nlp/subtitlecore"
 readme = "README.md"
 documentation = "https://qishe-nlp.github.io/subtitlecore/"
-keys = ["subtitle", "parse", "srt"] 
+keywords = ["subtitle", "parse", "srt"] 
 
 [tool.poetry.dependencies]
 python = "^3.8"

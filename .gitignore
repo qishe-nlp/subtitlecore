@@ -4,3 +4,4 @@ __pycache__
 *.vtt
 *.srt
 *.json
+apidocs/build

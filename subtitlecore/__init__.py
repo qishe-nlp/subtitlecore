@@ -7,7 +7,7 @@ This module demostrates the usage of package `subtitlecore`.
   
   .. code:: shell
     
-    $ pip3 install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple --verbose subtitlecore
+    $ pip3 install --verbose subtitlecore
 
 .. topic:: Use as executable
 

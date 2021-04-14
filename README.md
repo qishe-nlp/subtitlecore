@@ -2,8 +2,8 @@
 
 ```shell
 pip3 install --verbose subtitlecore
-python -m spacy download en_core_web_md
-python -m spacy download es_core_news_md
+python -m spacy download en_core_web_trf
+python -m spacy download es_dep_news_trf
 ```
 
 # Usage
@@ -92,7 +92,7 @@ cp -rf apidocs/build/html/* docs/
 ```
 
 ### Build
-* Change `version` in `pyproject.toml` and `content_processor/__init__.py`
+* Change `version` in `pyproject.toml` and `subtitlecore/__init__.py`
 * Build python package by `poetry build`
 
 ### Git commit and push

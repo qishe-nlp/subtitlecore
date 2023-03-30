@@ -1,9 +1,9 @@
-.. Subtitlecore documentation master file, created by
-   sphinx-quickstart on Tue Mar 23 17:08:47 2021.
+.. subtitlecore documentation master file, created by
+   sphinx-quickstart on Thu Mar 30 13:04:04 2023.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Subtitlecore's documentation!
+Welcome to subtitlecore's documentation!
 ========================================
 
 .. toctree::
@@ -11,7 +11,6 @@ Welcome to Subtitlecore's documentation!
    :caption: Contents:
 
    modules
-
 
 Indices and tables
 ==================

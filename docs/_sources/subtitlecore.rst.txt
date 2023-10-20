@@ -20,14 +20,6 @@ subtitlecore.entry module
    :undoc-members:
    :show-inheritance:
 
-subtitlecore.lib module
------------------------
-
-.. automodule:: subtitlecore.lib
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 subtitlecore.sentencizer module
 -------------------------------
 

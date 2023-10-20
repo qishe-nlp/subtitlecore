@@ -3,7 +3,6 @@
 import webvtt
 from os import path
 from subtitlecore import Sentencizer
-from subtitlecore.lib import filter_typos
 
 class Subtitle:
   """Manipulate subtitle content
@@ -40,7 +39,7 @@ class Subtitle:
       self.content.append({
         "start": caption.start,
         "end": caption.end,
-        "text": filter_typos(caption.text),
+        "text": caption.text,
         "identifier": str(index+1)
       })
 

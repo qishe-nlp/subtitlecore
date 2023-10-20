@@ -1,6 +1,8 @@
 from importlib import import_module
 from subtitlecore.constants import SPACY_PKG
 import spacy
+#from spacy.tokenizer import Tokenizer
+#import re
 
 class Sentencizer:
   """Sentenize a subtitle line object using spacy nlp
@@ -11,7 +13,7 @@ class Sentencizer:
 
   def __init__(self, lang):
     self._nlp = spacy.load(SPACY_PKG[lang])
-
+  
   def mark(self, line):
     """Parse text into sentences
     
@@ -23,8 +25,7 @@ class Sentencizer:
     """
     sens = []
     doc = self._nlp(line, disable=["tagger", "ner", "lemmatizer","textcat"])
-    _temp = list(doc.sents)
-    for s in _temp:
+    for s in doc.sents:
       e = s.text
       sens.append(e)
     return sens

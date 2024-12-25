@@ -55,7 +55,7 @@ This module demostrates the usage of package `subtitlecore`.
         print(l)
 
 """
-__version__ = '0.1.14'
+__version__ = '0.1.16'
 
 
 from .sentencizer import Sentencizer

@@ -5,3 +5,4 @@ __pycache__
 *.srt
 *.json
 apidocs/build
+*.sh
